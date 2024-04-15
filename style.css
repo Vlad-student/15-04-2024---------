@@ -127,7 +127,7 @@ animation-fill-mode: none; */
    width:80px ;
    background-image: url(./assets/image/hero_spritesheet.png);
 background-position-y: -94px;
-animation:walk 1s steps(6) infinite;
+animation: walk 1s steps(6) infinite, move 5s linear;
 background-repeat: no-repeat;
 }
 
@@ -135,4 +135,19 @@ background-repeat: no-repeat;
     100%{
         background-position-x: -480px; 
     }
+    
 }
+
+@keyframes walk{
+    100%{
+      background-position-x: -480px;
+    }
+  }
+  @keyframes move {
+    from {
+      left: 0;
+    }
+    to {
+      left: 90%;
+    }
+  }
