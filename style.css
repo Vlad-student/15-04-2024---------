@@ -123,31 +123,34 @@ animation-fill-mode: none; */
 
 
 .hero{
-   height: 94px ;
-   width:80px ;
-   background-image: url(./assets/image/hero_spritesheet.png);
-background-position-y: -94px;
-animation: walk 1s steps(6) infinite, move 5s linear;
-background-repeat: no-repeat;
-}
-
-@keyframes walk{
-    100%{
-        background-position-x: -480px; 
-    }
-    
-}
-
-@keyframes walk{
-    100%{
-      background-position-x: -480px;
-    }
-  }
-  @keyframes move {
-    from {
-      left: 0;
-    }
-    to {
-      left: 90%;
-    }
-  }
+    height: 94px ;
+    width:80px ;
+    background-image: url(./assets/image/hero_spritesheet.png);
+ background-position-y: -94px;
+ animation: walk 1s steps(6) infinite, move 5s linear;
+ background-repeat: no-repeat;
+ position: absolute;
+ left:0;
+ transition: left 5s;
+ }
+ 
+ @keyframes walk{
+     100%{
+         background-position-x: -480px; 
+     }
+     
+ }
+ 
+ @keyframes walk{
+     100%{
+       background-position-x: -480px;
+     }
+   }
+   @keyframes move {
+     from {
+       left: 0;
+     }
+     to {
+       left: 90%;
+     }
+   }
