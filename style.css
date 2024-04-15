@@ -1,0 +1,138 @@
+.wrapper{
+    height: 90vh;
+    background-color: beige;
+    position: relative;
+}
+.test{
+    height: 50px;
+    width: 50px;
+    background-color: fuchsia;
+    color: white;
+    padding: 5px;
+    font-size: 1.5em;
+    position: absolute;
+    animation:myAnim2 5s linear 0.2s 2 normal none;
+    left: 50%;
+    top: 50%;
+    /* animation-name: myAnim2 ;
+    animation-duration: 5s;
+animation-timing-function: linear;
+animation-delay: 0.2s;
+animation-iteration-count: 2;
+animation-direction: normal;
+animation-fill-mode: none; */
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+/* .wrapper:hover>.test{
+    animation:myAnim2 5s linear 0.2s 2 normal none;
+    
+}
+@keyframes myAnim2{
+    0%{
+       left:0;
+       top: 0; 
+    }
+    20%{
+        top: 0;
+        left: 50%;
+    background-color:red;}
+
+        40%{
+        top: 50%;
+        left: 50%;
+        background-color: aqua;
+        opacity: 1;
+        }
+        60%{
+            top: 50%;
+        left: 0;
+        background-color: yellow;
+        }
+    100%{
+        left: 0;
+        top:0;
+    }
+}
+
+
+@keyframes myAnim1{
+    from{
+       left:0;
+       top: 0; 
+    }
+    to{
+        left: 50%;
+        top:50%;
+    }
+} */
+
+.demo {
+    transform-origin: 50% 50%;
+    animation: demo-animation 3s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 3 normal both running;
+}
+
+@keyframes demo-animation {
+    0% {
+        transform: translate(-100px, -100px) rotate(0deg) scale(1, 1);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        border-radius: 0%;
+    }
+
+    25% {
+        transform: scale(1.5) rotate(90deg);
+        clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 100%);
+        border-radius: 50% 50% 50% 0%;
+    }
+
+    50% {
+        transform: scale(1) rotate(180deg);
+        border-radius: 75%;
+    }
+
+    75% {
+        transform: scale(0.5) rotate(270deg);
+        clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 100%);
+        border-radius: 75%;
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        border-radius: 0%;
+    }
+}
+
+.eye-blink {
+    transform-origin: 50% 100%;
+    animation: eye-blink-animation 1s linear 0s 1 normal both running;
+}
+
+@keyframes eye-blink-animation {
+
+    0%,
+    75%,
+    100% {
+        clip-path: ellipse(100% 100% at 50% 50%);
+    }
+
+    50% {
+        clip-path: ellipse(100% 0% at 50% 50%);
+    }
+}
+
+
+
+.hero{
+   height: 94px ;
+   width:80px ;
+   background-image: url(./assets/image/hero_spritesheet.png);
+background-position-y: -94px;
+animation:walk 1s steps(6) infinite;
+background-repeat: no-repeat;
+}
+
+@keyframes walk{
+    100%{
+        background-position-x: -480px; 
+    }
+}
